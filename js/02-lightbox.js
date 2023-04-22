@@ -6,7 +6,7 @@ console.log(galleryItems);
 const gallery = document.querySelector(".gallery");
 
 gallery.insertAdjacentHTML("beforeend", onGallery(galleryItems));
-gallery.addEventListener("click", onModal);
+
 
 let currentInstance = new SimpleLightbox(".gallery a", {
   captionsData: "alt",
@@ -26,6 +26,3 @@ function onGallery(item) {
     .join("");
 }
 
-function onModal(e) {
-  e.preventDefault();
-}
