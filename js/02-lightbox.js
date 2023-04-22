@@ -8,7 +8,10 @@ const gallery = document.querySelector(".gallery");
 gallery.insertAdjacentHTML("beforeend", onGallery(galleryItems));
 gallery.addEventListener("click", onModal);
 
-let currentInstance = new SimpleLightbox('.gallery a', { captionsData: "alt", captionDelay: "250" });
+let currentInstance = new SimpleLightbox(".gallery a", {
+  captionsData: "alt",
+  captionDelay: "250",
+});
 
 function onGallery(item) {
   return item
@@ -23,7 +26,6 @@ function onGallery(item) {
     .join("");
 }
 
-function onModal (e) {
-    e.preventDefault();
-    currentInstance;
+function onModal(e) {
+  e.preventDefault();
 }

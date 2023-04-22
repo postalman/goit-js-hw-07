@@ -34,6 +34,9 @@ function onGallery(item) {
 
 function onModal (e) {
     e.preventDefault();
+    if (e.target.nodeName !== 'IMG') {
+      return;
+  }
     currentInstance = basicLightbox.create(`<img src="${e.target.dataset.source}">`)
     currentInstance.show();
 }
